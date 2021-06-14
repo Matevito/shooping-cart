@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 
 const Navbar = () => {
-
+    //todo: add a shop icon in the jsx and maybe a style
     return(
         <div className="row">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -27,13 +27,13 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav-item">
-                        <Link to="/">
+                        <Link to="/about">
                             <span className="nav-link">About</span>
                         </Link>
                         </li>
 
                         <li className="nav-item">
-                        <Link to="/">
+                        <Link to="/chart">
                             <span className="nav-link">Chart</span>
                         </Link>
                         </li>
