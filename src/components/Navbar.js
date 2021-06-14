@@ -4,26 +4,40 @@ const Navbar = () => {
 
     return(
         <div className="row">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Navbar</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div className="container-fluid">
+                    <span className="navbar-brand">Shooping Mall</span>
+
+                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                    <ul className="navbar-nav">
+
+                        <li className="nav-item">
+                        <Link to="/">
+                            <span className="nav-link">Home</span>
+                        </Link>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Store</a>
+
+                        <li className="nav-item">
+                        <Link to="/store">
+                            <span className="nav-link">Store</span>
+                        </Link>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+
+                        <li className="nav-item">
+                        <Link to="/">
+                            <span className="nav-link">About</span>
+                        </Link>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link" href="#">Chart</a>
+
+                        <li className="nav-item">
+                        <Link to="/">
+                            <span className="nav-link">Chart</span>
+                        </Link>
                         </li>
+
                     </ul>
                     </div>
                 </div>
