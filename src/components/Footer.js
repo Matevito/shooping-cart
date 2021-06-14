@@ -1,7 +1,7 @@
 import GithubIcon from "./images/github.svg"
 
 const Footer = () => {
-
+    //todo: insert github folder 
     return(
         <div className="row">
             <div className="container my-5">
@@ -24,7 +24,8 @@ const Footer = () => {
                         A proyect created by: 
                         <a className="text-white"
                         href="https://github.com/Matevito"
-                        target="_blank" rel="noreferrer"> Mateo Diaz</a>
+                        target="_blank" rel="noreferrer"
+                        style={{textDecoration:"none", color:"inherit"}}> Mateo Diaz</a>
                     </div>
                 </footer>
             </div>

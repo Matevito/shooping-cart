@@ -15,25 +15,29 @@ const Navbar = () => {
                     <ul className="navbar-nav">
 
                         <li className="nav-item">
-                        <Link to="/">
+                        <Link to="/" 
+                        style={{textDecoration:"none", color:"inherit"}}>
                             <span className="nav-link">Home</span>
                         </Link>
                         </li>
 
                         <li className="nav-item">
-                        <Link to="/store">
+                        <Link to="/store"
+                        style={{textDecoration:"none", color:"inherit"}}>
                             <span className="nav-link">Store</span>
                         </Link>
                         </li>
 
                         <li className="nav-item">
-                        <Link to="/about">
+                        <Link to="/about"
+                        style={{textDecoration:"none", color:"inherit"}}>
                             <span className="nav-link">About</span>
                         </Link>
                         </li>
 
                         <li className="nav-item">
-                        <Link to="/chart">
+                        <Link to="/chart"
+                        style={{textDecoration:"none", color:"inherit"}}>
                             <span className="nav-link">Chart</span>
                         </Link>
                         </li>
