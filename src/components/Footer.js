@@ -10,7 +10,7 @@ const Footer = () => {
                     <div className="container d-flex justify-content-center py-5">
 
                         <button type="button" 
-                        className="btn btn-primary btn-lg btn-floating mx-2"
+                        className="btn btn-dark btn-lg btn-floating mx-2"
                         style={{backgroundColor: "#54456b"}}
                         href="#"
                         target="_blank" rel="noreferer">
