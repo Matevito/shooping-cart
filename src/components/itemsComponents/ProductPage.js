@@ -30,7 +30,7 @@ const ProductPage = ({ match }) => {
                     <h1>{productData.title}</h1>
                     <h3>Product info:</h3>
                     <div>{productData.description}</div>
-                    <h2>Price: </h2><span>${productData.price}</span>
+                    <h2>Price: <span>${productData.price}</span></h2>
                     
                     {/* buying event */}
                     

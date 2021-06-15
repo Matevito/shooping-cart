@@ -21,6 +21,9 @@ function App() {
           <Route exact path="/store" component={Store} />
           <Route exact path="/store/:id" component={ProductPage}/>
 
+          <Route path="/about" component={About} />
+          <Route path="/cart" component={Cart} />
+
         </Switch>
         
         <Footer />
