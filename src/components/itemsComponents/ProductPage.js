@@ -15,9 +15,28 @@ const ProductPage = ({ match }) => {
     }
 
     return(
-        <div className="row">
-
+        <div className="container">
+            <div className="row">
             
+                    {/* product image display */}
+                <div className="col ">
+                    <img src={productData.image} 
+                    style={{maxWidth:350, maxHeight:350}}
+                    alt="product_img"
+                    className="card-image rounded mx-auto d-block"></img>
+                </div>  
+                <div className="col ">
+                    {/* buying product info*/}
+                    <h1>{productData.title}</h1>
+                    <h3>Product info:</h3>
+                    <div>{productData.description}</div>
+                    <h2>Price: </h2><span>${productData.price}</span>
+                    
+                    {/* buying event */}
+                    
+                </div>
+                
+            </div>
         </div>
     )
 }
