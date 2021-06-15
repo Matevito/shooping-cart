@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import ProductCard from "./itemsComponents/ProductCard"
 
 const Store = () => {
-    const [productsData, set_productsData] = useState("")
+    const [productsData, set_productsData] = useState([])
 
     useEffect(() => {
         fetchStoreData()  
