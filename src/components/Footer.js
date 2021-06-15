@@ -4,7 +4,6 @@ const Footer = () => {
     //todo: insert github folder 
     return(
         <div className="row">
-            <div className="container my-5">
                 <footer className="text-center bg-secondary text-lg-start">
                     {/* Icons space */}
                     <div className="container d-flex justify-content-center py-5">
@@ -28,7 +27,7 @@ const Footer = () => {
                         style={{textDecoration:"none", color:"inherit"}}> Mateo Diaz</a>
                     </div>
                 </footer>
-            </div>
+            
         </div>
     )
 }
