@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import ProductCard from "./itemsComponents/ProductCard"
 
 const Store = () => {
@@ -18,8 +19,14 @@ const Store = () => {
             <h1 className="text-center">Store products</h1>
             {/* Render the cards*/}
             {productsData.map(product => {
-                return <ProductCard key={product.id} 
-                product_data={product}/>
+                return (
+                    <Link to={"/shop/"+product.id} className="col-sm-1 col-md-4"
+                    style={{textDecoration:"none", color:"inherit"}}>
+                        <ProductCard key={product.id} 
+                        product_data={product}/>
+                    </Link>
+                )
+
             })}
         </div>
     )
