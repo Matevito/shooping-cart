@@ -1,5 +1,5 @@
 
-const Chart  = () => {
+const Cart  = () => {
 
     return(
         <div>
@@ -8,4 +8,4 @@ const Chart  = () => {
     )
 }
 
-export default Chart
+export default Cart

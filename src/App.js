@@ -5,6 +5,8 @@ import Footer from "./components/Footer";
 import Home  from "./components/Home";
 import Store from "./components/Store";
 import ProductPage from "./components/itemsComponents/ProductPage"
+import About from "./components/About"
+import Cart from "./components/Cart"
 
 
 function App() {

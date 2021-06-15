@@ -36,9 +36,9 @@ const Navbar = () => {
                         </li>
 
                         <li className="nav-item">
-                        <Link to="/chart"
+                        <Link to="/cart"
                         style={{textDecoration:"none", color:"inherit"}}>
-                            <span className="nav-link">Chart</span>
+                            <span className="nav-link">Cart</span>
                         </Link>
                         </li>
 
