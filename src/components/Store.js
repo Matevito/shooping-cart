@@ -20,7 +20,7 @@ const Store = () => {
             {/* Render the cards*/}
             {productsData.map(product => {
                 return (
-                    <Link to={"/shop/"+product.id} className="col-sm-1 col-md-4"
+                    <Link to={"/store/"+product.id} className="col-sm-1 col-md-4"
                     style={{textDecoration:"none", color:"inherit"}}>
                         <ProductCard key={product.id} 
                         product_data={product}/>

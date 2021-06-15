@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home  from "./components/Home";
 import Store from "./components/Store";
+import ProductPage from "./components/itemsComponents/ProductPage"
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Switch>
           {/* app paths*/}
           <Route exact path="/" component={Home} />
-          <Route path="/store" component={Store} />
+          <Route exact path="/store" component={Store} />
+          <Route exact path="/store/:id" component={ProductPage}/>
 
         </Switch>
         
