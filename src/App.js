@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
@@ -10,6 +10,7 @@ import Cart from "./components/Cart"
 
 
 function App() {
+
   return (
     <div className="conteiner-flex">
       <Router>
