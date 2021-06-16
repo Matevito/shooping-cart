@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react"
+import React, { useContext, useEffect, useState } from "react"
+import { CartContext } from "../CartContext"
 
 const ProductPage = ({ match }) => {
     const [productData, set_productData] = useState({})
     const productId = match.params.id
+    const [cart, set_cart] = useContext(CartContext)
 
     useEffect(()=> {
         fetchProductData()
@@ -33,6 +35,10 @@ const ProductPage = ({ match }) => {
                     <h2>Price: <span>${productData.price}</span></h2>
                     
                     {/* buying event */}
+                    <form>
+                        <input type="number"></input>
+                        <button className="btn btn-primary">Add to cart</button>
+                    </form>
                     
                 </div>
                 

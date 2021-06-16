@@ -3,14 +3,14 @@ import React, {useState, createContext} from "react"
 export const CartContext = createContext();
 
 
-export const CartProvideer = (props) => {
+export const CartProvider = (props) => {
     const [cart, set_cart] = useState([])
 
 
     return(
         <div>
-            <CartContext.Provider>
-                {PaymentResponse.children}
+            <CartContext.Provider value={[cart, set_cart]}>
+                {props.children}
             </CartContext.Provider>
         </div>
     )

@@ -7,6 +7,7 @@ import Store from "./components/Store";
 import ProductPage from "./components/itemsComponents/ProductPage"
 import About from "./components/About"
 import Cart from "./components/Cart"
+import { CartProvider } from "./components/CartContext"
 
 
 function App() {
@@ -14,19 +15,22 @@ function App() {
   return (
     <div className="conteiner-flex">
       <Router>
-        <Navbar />
+        {/*cart context provider*/}
+        <CartProvider>
+          <Navbar />
 
-        <Switch>
-          {/* app paths*/}
-          <Route exact path="/" component={Home} />
-          <Route exact path="/store" component={Store} />
-          <Route exact path="/store/:id" component={ProductPage}/>
+          <Switch>
+            {/* app paths*/}
+            <Route exact path="/" component={Home} />
+            <Route exact path="/store" component={Store} />
+            <Route exact path="/store/:id" component={ProductPage}/>
 
-          <Route path="/about" component={About} />
-          <Route path="/cart" component={Cart} />
+            <Route path="/about" component={About} />
+            <Route path="/cart" component={Cart} />
 
-        </Switch>
-        
+          </Switch>
+        </CartProvider>
+
         <Footer />
       </Router>
     </div>
