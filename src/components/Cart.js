@@ -18,8 +18,15 @@ const Cart  = () => {
         return prices.reduce((accumulator, currentValue) => accumulator+ currentValue)
     }
 
+    const buyProducts = (event) => {
+        event.preventDefault()
+        //altert message of to build logic
+        set_cart([])
+    }
+
     return(
         <div className="container">
+            <h1 className="text-center">Recipt</h1>
             {cart.map(product => {
                 return(
                     <div key={product.product_id}>
@@ -34,7 +41,8 @@ const Cart  = () => {
             })}
             <hr />
             <h1>Total: ${getTotal()}</h1>
-            <form>
+            <form className="text-center"
+            onClick={buyProducts}>
                 <button className="btn btn-primary">Buy!</button>
             </form>
         </div>

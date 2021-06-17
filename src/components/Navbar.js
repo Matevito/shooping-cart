@@ -7,6 +7,18 @@ const Navbar = () => {
     //todo: add a shop icon in the jsx
     const [cart, set_cart] = useContext(CartContext)
 
+    const get_productsInCart = () => {
+        let quantityes = []
+        let product;
+        for(product of cart){
+            let Pquantity = parseInt(product.quantity)
+            quantityes.push(Pquantity)
+        }
+        if(quantityes.length === 0){
+            return ""
+        }
+        return quantityes.reduce((accumulator, currentValue) => accumulator+ currentValue)
+    }
     return(
         <div className="row">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,7 +56,7 @@ const Navbar = () => {
                         <Link to="/cart"
                         style={{textDecoration:"none", color:"inherit"}}>
                             <span className="nav-link"><img src={cartImg} alt="cart_icon" style={{height:30}}></img>
-                                <span>{cart.length}</span>
+                                <span>{get_productsInCart()}</span>
                             </span>
                         </Link>
                         </li>
