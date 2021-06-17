@@ -1,7 +1,10 @@
+import { useContext } from "react"
 import { Link } from "react-router-dom"
+import { CartContext } from "./CartContext"
 
 const Navbar = () => {
     //todo: add a shop icon in the jsx
+    const [cart, set_cart] = useContext(CartContext)
     return(
         <div className="row">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
