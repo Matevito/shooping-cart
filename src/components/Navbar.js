@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { Link } from "react-router-dom"
 import { CartContext } from "./CartContext"
+import cartImg from "./images/cart.png"
 
 const Navbar = () => {
     //todo: add a shop icon in the jsx
@@ -42,7 +43,7 @@ const Navbar = () => {
                         <li className="nav-item">
                         <Link to="/cart"
                         style={{textDecoration:"none", color:"inherit"}}>
-                            <span className="nav-link">Cart
+                            <span className="nav-link"><img src={cartImg} alt="cart_icon" style={{height:30}}></img>
                                 <span>{cart.length}</span>
                             </span>
                         </Link>
