@@ -8,11 +8,14 @@ const ProductPage = ({ match }) => {
     const [cart, set_cart] = useContext(CartContext)
 
     const [productCart, set_productCart] = useState({})
+
     const [productQuantity, set_productQuantity] = useState(0)
 
     useEffect(()=> {
         fetchProductData()
         //load quantity
+
+
 
         set_productCart({
             product_id:productId,
@@ -28,6 +31,13 @@ const ProductPage = ({ match }) => {
 
     const handleQuantity = (event) => {
         set_productQuantity(event.target.value)
+        set_productQuantity(c_value => {
+                set_productCart({
+                    product_id:productId,
+                    quantity:c_value
+                })
+            return c_value
+        })
     }
 
     const product_toCart = (event) => {
@@ -35,10 +45,6 @@ const ProductPage = ({ match }) => {
         
         //
         let c_productInCart = cart.filter(prod => prod.product_id === productCart.product_id)
-        console.log(productId)
-        console.log("product in cart lenght:")
-        console.log(c_productInCart)
-        
 
         if (c_productInCart.length === 0){
             let new_cart = cart.concat(productCart)
