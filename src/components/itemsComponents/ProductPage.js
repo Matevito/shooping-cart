@@ -33,7 +33,7 @@ const ProductPage = ({ match }) => {
             })
         }
 
-    },)
+    },[])
 
     const fetchProductData = () => {
         fetch("https://fakestoreapi.com/products/"+productId, {mode:"cors"})
@@ -88,7 +88,6 @@ const ProductPage = ({ match }) => {
             set_cart(new_cart)
         }
     }
-
     return(
         <div className="container">
             <div className="row">
