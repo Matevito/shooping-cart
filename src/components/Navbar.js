@@ -5,6 +5,7 @@ import { CartContext } from "./CartContext"
 const Navbar = () => {
     //todo: add a shop icon in the jsx
     const [cart, set_cart] = useContext(CartContext)
+
     return(
         <div className="row">
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -41,7 +42,9 @@ const Navbar = () => {
                         <li className="nav-item">
                         <Link to="/cart"
                         style={{textDecoration:"none", color:"inherit"}}>
-                            <span className="nav-link">Cart</span>
+                            <span className="nav-link">Cart
+                                <span>{cart.length}</span>
+                            </span>
                         </Link>
                         </li>
 
