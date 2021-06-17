@@ -62,14 +62,9 @@ const ProductPage = ({ match }) => {
         }
     }
 
-    const showCart = () => {
-        console.log(cart)
-    }
-
     return(
         <div className="container">
             <div className="row">
-                <button onClick={showCart}>Cart</button>
             
                     {/* product image display */}
                 <div className="col ">
