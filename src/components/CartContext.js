@@ -7,6 +7,7 @@ export const CartProvider = (props) => {
     const [cart, set_cart] = useState([])
 
 
+
     return(
         <div>
             <CartContext.Provider value={[cart, set_cart]}>
