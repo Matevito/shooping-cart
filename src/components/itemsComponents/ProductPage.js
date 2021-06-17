@@ -29,13 +29,11 @@ const ProductPage = ({ match }) => {
             set_productCart(c_productInCart[0])
             set_productCart(c_product => {
                 set_productQuantity(c_product.quantity)
-                console.log(c_product.quantity)
                 return c_product
             })
         }
 
-        
-    }, [])
+    },)
 
     const fetchProductData = () => {
         fetch("https://fakestoreapi.com/products/"+productId, {mode:"cors"})
