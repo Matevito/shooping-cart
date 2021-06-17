@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { CartContext } from "../CartContext"
+import { Link } from "react-router-dom"
 
 const ProductPage = ({ match }) => {
     const [productData, set_productData] = useState({})
@@ -15,13 +16,25 @@ const ProductPage = ({ match }) => {
         fetchProductData()
         //load quantity
 
-
-
-        set_productCart({
-            product_id:productId,
-            price: productData.price,
-            quantity:productQuantity
+        //check if product is already on cart
+        let c_productInCart = cart.filter(prod => prod.product_id === productCart.product_id)
+        if(c_productInCart.length ===0){
+            //product is not already in cart
+            set_productCart({
+                product_id:productId,
+                price: productData.price,
+                quantity:productQuantity
         })
+        }else{
+            set_productCart(c_productInCart[0])
+            set_productCart(c_product => {
+                set_productQuantity(c_product.quantity)
+                console.log(c_product.quantity)
+                return c_product
+            })
+        }
+
+        
     }, [])
 
     const fetchProductData = () => {
@@ -106,6 +119,10 @@ const ProductPage = ({ match }) => {
                     
                 </div>
                 
+                <Link to="/store"
+                style={{textDecoration:"none", color:"inherit"}}>
+                    <h1>RETURN</h1>
+                </Link>
             </div>
         </div>
     )
