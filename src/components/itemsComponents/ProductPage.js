@@ -19,6 +19,7 @@ const ProductPage = ({ match }) => {
 
         set_productCart({
             product_id:productId,
+            price: productData.price,
             quantity:productQuantity
         })
     }, [])
@@ -34,6 +35,8 @@ const ProductPage = ({ match }) => {
         set_productQuantity(c_value => {
                 set_productCart({
                     product_id:productId,
+                    title: productData.title,
+                    price: productData.price,
                     quantity:c_value
                 })
             return c_value
@@ -43,7 +46,12 @@ const ProductPage = ({ match }) => {
     const product_toCart = (event) => {
         event.preventDefault()
         
-        //
+        //return if the pquantity is 0
+        if (productCart.quantity === 0){
+            return
+        }
+
+        //check if the product is already in the cart
         let c_productInCart = cart.filter(prod => prod.product_id === productCart.product_id)
 
         if (c_productInCart.length === 0){
@@ -65,7 +73,6 @@ const ProductPage = ({ match }) => {
     return(
         <div className="container">
             <div className="row">
-            
                     {/* product image display */}
                 <div className="col ">
                     <img src={productData.image} 
