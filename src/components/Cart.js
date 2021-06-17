@@ -25,13 +25,18 @@ const Cart  = () => {
                     <div key={product.product_id}>
                         <h1>{product.title}</h1>
                         <div><h2>Price: ${product.price}</h2>
-                        <span> Quantity: X{product.quantity}</span>
+                        <span>X{product.quantity}</span>
                         </div>
                         <h2>Subtotal: ${product.price * product.quantity}</h2>
+                        <hr/>
                     </div>
                 )
             })}
+            <hr />
             <h1>Total: ${getTotal()}</h1>
+            <form>
+                <button className="btn btn-primary">Buy!</button>
+            </form>
         </div>
     )
 }

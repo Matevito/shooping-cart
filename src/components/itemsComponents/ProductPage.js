@@ -45,7 +45,7 @@ const ProductPage = ({ match }) => {
 
     const product_toCart = (event) => {
         event.preventDefault()
-        
+
         //return if the pquantity is 0
         if (productCart.quantity === 0){
             return
@@ -67,6 +67,14 @@ const ProductPage = ({ match }) => {
             })
             set_cart(new_cart)
             //add the product
+        }
+
+        //remove products with 0 quantityes
+        if(productCart.quantity === "0"){
+            let new_cart = cart.filter(product => {
+                return product.product_id !== productId
+            })
+            set_cart(new_cart)
         }
     }
 
